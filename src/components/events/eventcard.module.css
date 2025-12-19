@@ -1,0 +1,145 @@
+.card {
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--primary-light);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card header p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card header h3 {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.meta dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.meta dd {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.link {
+  font-weight: 600;
+  color: var(--primary);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.draft,
+.pending,
+.approved,
+.rejected,
+.canceled,
+.completed {
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.draft {
+  background: rgba(107, 114, 128, 0.2);
+  color: var(--muted);
+}
+
+.pending {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--warning);
+}
+
+.approved {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.15));
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.rejected,
+.canceled {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.completed {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(99, 102, 241, 0.15));
+  color: var(--primary);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+}
+
+
+

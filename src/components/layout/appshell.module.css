@@ -1,0 +1,32 @@
+.shell {
+  background: var(--background);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: var(--surface-alt);
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+}
+
+
+

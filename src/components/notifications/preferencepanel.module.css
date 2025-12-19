@@ -1,0 +1,41 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.preference {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-alt);
+  cursor: pointer;
+}
+
+.preference strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.preference p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.preference input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.preference:hover {
+  background: var(--surface);
+  border-color: var(--primary);
+}
+
+
+

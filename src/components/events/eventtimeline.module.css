@@ -1,0 +1,68 @@
+.timeline {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.timeline:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.schedule {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.schedule p {
+  margin: 0.25rem 0;
+  color: var(--muted);
+}
+
+.timezone {
+  font-size: 0.85rem;
+}
+
+.milestones {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: 0.35rem;
+}
+
+.milestone strong {
+  display: block;
+}
+
+.milestone p {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+
+

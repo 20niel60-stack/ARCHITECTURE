@@ -1,0 +1,145 @@
+.commentForm {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.commentInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  background: var(--surface-alt);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submitButton {
+  margin-top: 0.75rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentCard {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface-alt);
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.commentHeader > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.commentDate {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.commentText {
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+  white-space: pre-wrap;
+}
+
+.eventRating {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.ratingButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.ratingButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.ratingButton:hover {
+  background: var(--surface-alt);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.ratingButton.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.ratingButton.active:hover {
+  background: var(--primary-dark);
+}
+
+.eventCardWithBackground {
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.eventCardWithBackground header h3 {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.eventCardWithBackground header p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
